@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html ng-app="AngularJs-Http">
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <title>AngularJs Using $http</title>
+    <style>
+        #body {
+            margin-left: 300px;
+            margin-right: 300px;
+            margin-top: 100px;
+            background-color: aliceblue;
+        }
+        .contanier{
+            background-color:antiquewhite;
+            font-family:Tahoma;
+        }
+        #frm{
+            position:absolute;
+            right:300px;
+            margin-bottom:30px;
+        }
+        
+    
+    </style>
+</head>
+
+
+<body id="body" ng-controller="Controller">
+
+    <div class="contanier">
+
+        <form id="frm" ng-submit="SearchId()">
+            <input type="text" ng-model="Id" placeholder="Search ID number..." />
+            <button class="btn btn-danger">Search</button>
+        </form>
+        </br></br>
+        <table class="table table-striped">
+            <th>USERID</th>
+            <th>ID</th>
+            <th>TITLE</th>
+            <tr ng-repeat="user in IdResult">
+                <td>{{user.userId}}</td>
+                <td>{{user.id}}</td>
+                <td>{{user.title}}</td>
+            </tr>
+        </table>
+        </br>
+        <table class="table table-striped">
+            <th>USERID</th>
+            <th>ID</th>
+            <th>TITLE</th>
+            <tr ng-repeat="user in users">
+                <td>{{user.userId}}</td>
+                <td>{{user.id}}</td>
+                <td>{{user.title}}</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+</body>
+</html>
